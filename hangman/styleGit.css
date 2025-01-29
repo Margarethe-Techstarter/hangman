@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(193, 115, 89, 0.729);
+}
+
+h1 {
+    color: rgb(252, 252, 252);
+
+    margin-top: 50px;
+    text-align: center;
+}
+
+.comment,
+.hidd,
+.versuch,
+.rate {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.hang {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"] {
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 20px;
+
+
+
+
+    #letter-input {
+        text-align: center;
+
+    }
+
+
+}
+
+.buchstaberaten {
+    background-color: rgb(56, 54, 54);
+    color: white;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.neues {
+    background-color: rgb(238, 121, 121);
+    color: black;
+    border-radius: 5px;
+    width: 30%;
+}
