@@ -57,6 +57,7 @@ function checkGameOver() {
     }
 }
 
+// Änderungen in der `guessLetter` Funktion, um nach dem Setzen des eigenen Wortes zu überprüfen
 function guessLetter() {
     const letterInput = document.getElementById('letter-input');
     const buchstabe = letterInput.value.toLowerCase();
@@ -71,7 +72,6 @@ function guessLetter() {
 }
 
 
-
 function clearGame() {
     hiddenWord = '_'.repeat(word.length);
     fehlversuche = 10;
@@ -79,6 +79,39 @@ function clearGame() {
     word = words[Math.floor(Math.random() * words.length)];
     showStatus();
 }
+
+// Funktion zum Erstellen eines eigenen Wortes
+function generateCustomWord() {
+    const customWordInput = document.getElementById('custom-word-input');
+    customWordInput.style.display = 'block'; // Eingabefeld sichtbar machen
+    customWordInput.focus();
+    document.getElementById('theme-area').textContent = 'Gib ein eigenes Wort ein!';
+}
+
+// Funktion zum Setzen des eigenen Wortes
+function setCustomWord() {
+    const customWordInput = document.getElementById('custom-word-input');
+    const customWord = customWordInput.value.trim().toLowerCase();
+
+    if (customWord && /^[a-zA-Z]+$/.test(customWord)) {
+        word = customWord;
+        hiddenWord = '_'.repeat(word.length);
+        fehlversuche = 10;
+        errateneBuchs = [];
+        document.getElementById('theme-area').textContent = 'Rate ein eigenes Wort!';
+        showStatus();
+        customWordInput.value = ''; // Eingabefeld zurücksetzen
+        customWordInput.style.display = 'none'; // Eingabefeld wieder ausblenden
+    } else {
+        alert('Bitte gib ein gültiges Wort ein!');
+    }
+}
+
+
+// Funktion zum Hinzufügen des "Setzen"-Buttons für das eigene Wort
+document.getElementById('custom-word-input').addEventListener('blur', setCustomWord);
+
+
 
 
 showStatus();
