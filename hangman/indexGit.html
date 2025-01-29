@@ -10,7 +10,7 @@
 
 <body>
     <h1>Willkommen zu Hangman Game</h1>
-    <p class="comment">Rate einen Begriff aus der Webentwicklung</p>
+    <p id="theme-area" class="comment">Rate einen Begriff aus der Webentwicklung</p>
 
     <div id="game-status" class="card">
         <p id="hidden-word" class="hidd">-----</p>
@@ -22,13 +22,11 @@
     <input type="text" id="letter-input" maxlength="1" placeholder="Buchstaben eingeben" />
     <button onclick="guessLetter()" class="buchstaberaten">Rate Buchstaben</button><br>
     <button onclick="clearGame()" class="neues">Neues Spiel</button>
-
-
-<button onclick="generateCustomWord()" class="neues">Eigenes Wort eingeben</button>
-<input type="text" id="custom-word-input" placeholder="Gib dein Wort ein!" style="display:none;" />
-
-
-
+    
+    <!-- Eingabefeld für benutzerdefiniertes Wort -->
+    <input type="text" id="custom-word-input" style="display:none;" placeholder="Eigenes Wort eingeben">
+    <!-- Button, um benutzerdefiniertes Wort zu aktivieren -->
+    <button onclick="generateCustomWord()" class="neues">Eigenes Wort setzen</button>
 
     <script src="hangmanGit.js"></script>
 </body>
