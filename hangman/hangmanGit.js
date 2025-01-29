@@ -23,7 +23,6 @@ function drawHangman() {
     hangmanMann.innerHTML = `${hangmanStages[10 - fehlversuche]}`;
 }
 
-
 function showStatus() {
     document.getElementById('hidden-word').textContent = hiddenWord.split('').join(' ');
     document.getElementById('attempts').textContent = `Versuche: ${fehlversuche}`;
@@ -71,7 +70,6 @@ function guessLetter() {
     }
 }
 
-
 function clearGame() {
     hiddenWord = '_'.repeat(word.length);
     fehlversuche = 10;
@@ -107,12 +105,8 @@ function setCustomWord() {
     }
 }
 
-
-// Funktion zum Hinzufügen des "Setzen"-Buttons für das eigene Wort
+// EventListener für das Verlassen des Eingabefelds (blur)
 document.getElementById('custom-word-input').addEventListener('blur', setCustomWord);
-
-
-
 
 showStatus();
 
