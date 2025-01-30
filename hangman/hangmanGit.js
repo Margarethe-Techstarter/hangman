@@ -5,6 +5,24 @@ let hiddenWord = '_'.repeat(word.length);
 let fehlversuche = 10;
 let errateneBuchs = [];
 
+// function drawHangman() { // funktionierende version
+//     const hangmanStages = [
+//         `---`, // 10 Versuche übrig
+//         `|    \n|    \n|\n|\n|\n---`, // 9 Versuche übrig
+//         `------\n|    \n|    \n|    \n|\n|\n---`, // 8 Versuche übrig
+//         `------\n|    |\n|    \n|    \n|\n|\n---`, // 7 Versuche übrig
+//         `------\n|    |\n|    O\n|    \n|\n|\n---`, // 6 Versuche übrig
+//         `------\n|    |\n|    O\n|    |\n|\n|\n---`, // 5 Versuche übrig
+//         `------\n|    |\n|    O\n|   /|\n|\n|\n---`, // 4 Versuche übrig
+//         `------\n|    |\n|    O\n|   /|\\\n|\n|\n---`, // 3 Versuche übrig
+//         `------\n|    |\n|    O\n|   /|\\\n|   /\n|\n---`, // 2 Versuche übrig
+//         `------\n|    |\n|    O\n|   /|\\\n|   / \\\n|   DEAD\n---`, // 1 Versuch übrig
+//     ];
+
+//     const hangmanMann = document.getElementById('hangman');
+//     hangmanMann.innerHTML = `${hangmanStages[10 - fehlversuche]}`;
+// }
+
 function drawHangman() {
     const hangmanStages = [
         `---`, // 10 Versuche übrig
@@ -22,6 +40,7 @@ function drawHangman() {
     const hangmanMann = document.getElementById('hangman');
     hangmanMann.innerHTML = `${hangmanStages[10 - fehlversuche]}`;
 }
+
 
 function showStatus() {
     document.getElementById('hidden-word').textContent = hiddenWord.split('').join(' ');
