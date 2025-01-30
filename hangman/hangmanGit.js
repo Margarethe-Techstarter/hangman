@@ -56,7 +56,6 @@ function checkGameOver() {
     }
 }
 
-// Änderungen in der `guessLetter` Funktion, um nach dem Setzen des eigenen Wortes zu überprüfen
 function guessLetter() {
     const letterInput = document.getElementById('letter-input');
     const buchstabe = letterInput.value.toLowerCase();
@@ -78,7 +77,7 @@ function clearGame() {
     showStatus();
 }
 
-// Funktion zum Erstellen eines eigenen Wortes
+// Erstellen eines eigenen Wortes
 function generateCustomWord() {
     const customWordInput = document.getElementById('custom-word-input');
     customWordInput.style.display = 'block'; // Eingabefeld sichtbar machen
@@ -86,7 +85,7 @@ function generateCustomWord() {
     document.getElementById('theme-area').textContent = 'Gib ein eigenes Wort ein!';
 }
 
-// Funktion zum Setzen des eigenen Wortes
+// Setzen des eigenen Wortes
 function setCustomWord() {
     const customWordInput = document.getElementById('custom-word-input');
     const customWord = customWordInput.value.trim().toLowerCase();
