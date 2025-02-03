@@ -100,7 +100,7 @@ function clearGame() {
 function generateCustomWord() {
     const customWordInput = document.getElementById('custom-word-input');
     customWordInput.style.display = 'block'; // Eingabefeld sichtbar machen
-    customWordInput.focus();
+    // customWordInput.focus();
     document.getElementById('theme-area').textContent = 'Gib ein eigenes Wort ein!';
 }
 

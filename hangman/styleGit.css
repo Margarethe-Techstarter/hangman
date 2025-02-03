@@ -6,10 +6,11 @@ body {
     align-items: center;
     height: 80vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* background-image: url('file:///C:/Users/marga/Desktop/Unterricht/galgen%20image.jpg');    Hintergrundbild hinzufügen */
-    background-size: cover; /* Bild an den Viewport anpassen */
+    background-image: url('file:///C:/Users/marga/Desktop/Unterricht/galgen123.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
     background-position: center; /* Bild zentrieren */
-    background-color: rgba(193, 115, 89, 0.729); /* Hintergrundfarbe als Fallback */
+    background-color: rgb(3, 3, 3); /* Hintergrundfarbe als Fallback */
 }
 
 h1 {
@@ -31,7 +32,12 @@ h1 {
     display: block;
     /* overflow: hidden;  Verhindert das Vergrößern der Box */
 }
-.comment,
+
+.comment {
+    color: white;
+}
+
+
 .hidd,
 .versuch,
 .rate {
@@ -73,10 +79,9 @@ input[type="text"] {
 #hangman {
     font-family: monospace; /* Monospace für gleiche Breite der Zeichen */
     /* font-size: 16px;         Anpassbare Schriftgröße */
-    white-space: pre;        //Behalte Zeilenumbrüche bei
+    white-space: pre;        
     width: 200px;            /* Feste Breite */
     height: 150px;           /* Feste Höhe */
-    display: flex;          /* Block-Level Anzeige */
-    /* text-align: center;      Zentrierte Ausrichtung */
-    margin: 10px auto;       /* Zentriert auf der Seite */
+    display: flex;          
+    margin: 10px auto;     
 }

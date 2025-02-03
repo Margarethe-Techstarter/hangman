@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
     //  Hauptseite (indexGit.html)
     if (reqUrl === '/') {
         fs.readFile(path.join(__dirname, 'indexGit.html'), 'utf8', (err, data) => {
-            if (err) { //hallo
+            if (err) { 
                 res.statusCode = 500;
                 res.end('Error loading HTML file');
                 return;
